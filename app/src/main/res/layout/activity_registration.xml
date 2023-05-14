@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
+    tools:context=".activities.RegistrationActivity">
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/register"
+        android:text="@string/create_account"
         android:textAlignment="center"
         android:textColor="#FBFBFB"
         android:textSize="19dp"
@@ -134,11 +134,11 @@
         android:onClick="login"
         android:text="@string/sign_in"
         android:textAlignment="center"
-        android:textColor="@color/pink"
+        android:textColor="@color/mediumTurquoise"
         android:textSize="19dp"
         android:textStyle="bold"
         android:paddingTop="12dp"
-        android:paddingLeft="5dp"
+        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"

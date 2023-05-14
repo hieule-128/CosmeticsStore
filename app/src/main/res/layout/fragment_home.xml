@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-    <TextView
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/lightYellow">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextHome"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@drawable/baseline_search_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/amita"
+            android:hint="@string/search"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/darkRed"
+            android:textColorHint="@color/darkRed"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+        
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_person"
+            app:layout_constraintBottom_toBottomOf="@id/editTextHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="10dp"
+            android:background="@drawable/search_bg"
+            app:layout_constraintStart_toEndOf="@id/editTextHome"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beauty_cosmetics"
+            android:fontFamily="@font/amita"
+            android:layout_margin="6dp"
+            android:textSize="35sp"
+            android:textColor="@color/darkRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextHome"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

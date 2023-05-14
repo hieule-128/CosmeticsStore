@@ -18,8 +18,7 @@
     <string name="password">Password</string>
     <string name="email_address">Email Address</string>
     <string name="full_name">Full Name</string>
-    <string name="don_t_have_an_account">Don\'t have an account!</string>
-    <string name="you_don_t_have_an_account">You don\'t have an account?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="category">Category</string>
     <string name="favourite">Favourite</string>
     <string name="my_cart">My Cart</string>
@@ -28,4 +27,8 @@
     <string name="user">User</string>
     <string name="useremail_gmail_com">useremail@gmail.com</string>
     <string name="log_out">Log out</string>
+    <string name="hello">Hello!</string>
+    <string name="create_account">Create account</string>
+    <string name="beauty_cosmetics">Beauty Cosmetics</string>
+    <string name="search">Search...</string>
 </resources>

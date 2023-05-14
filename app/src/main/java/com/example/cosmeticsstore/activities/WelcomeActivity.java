@@ -1,4 +1,4 @@
-package com.example.cosmeticsstore;
+package com.example.cosmeticsstore.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.cosmeticsstore.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -18,10 +20,10 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
     }
     public void register(View view){
-        startActivity(new Intent(WelcomeActivity.this,RegistrationActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, RegistrationActivity.class));
     }
 
     public void login(View view){
-        startActivity(new Intent(WelcomeActivity.this,LoginActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
     }
 }
