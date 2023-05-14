@@ -1,25 +1,25 @@
-package com.example.cosmeticsstore.ui.home;
+package com.example.cosmeticsstore.ui.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.cosmeticsstore.databinding.FragmentHomeBinding;
+import com.example.cosmeticsstore.databinding.FragmentCategoryBinding;
 
-public class HomeFragment extends Fragment {
+public class CategoryFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentCategoryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+
+        binding = FragmentCategoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
         return root;
     }
 
