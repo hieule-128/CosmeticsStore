@@ -31,4 +31,5 @@
     <string name="create_account">Create account</string>
     <string name="beauty_cosmetics">Beauty Cosmetics</string>
     <string name="search">Search...</string>
+    <string name="your_cart_is_empty">Your Cart is Empty</string>
 </resources>
