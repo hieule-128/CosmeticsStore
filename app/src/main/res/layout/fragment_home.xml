@@ -32,9 +32,9 @@
             tools:ignore="TextSizeCheck" />
         
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/baseline_person"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_shopping_cart_24"
             app:layout_constraintBottom_toBottomOf="@id/editTextHome"
             app:layout_constraintEnd_toEndOf="parent"
             android:padding="10dp"
@@ -65,7 +65,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/home_product_recycler"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="400dp"
             android:layout_margin="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,21 +73,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/home_hor_recycler"
             app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="112dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/cart_button"
-            android:fontFamily="@font/rubik_medium"
-            android:text="@string/your_cart_is_empty"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_product_recycler"
-            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

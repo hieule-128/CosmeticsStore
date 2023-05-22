@@ -52,12 +52,12 @@ public class HomeFragment extends Fragment {
 
         //For product item
         prodList = new ArrayList<>();
-        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "65.000đ", R.drawable.makeup1));
-        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "65.000đ", R.drawable.body1));
-        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "65.000đ", R.drawable.hair1));
-        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "65.000đ", R.drawable.skincare1));
-        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "65.000đ", R.drawable.perfume1));
-        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "65.000đ", R.drawable.perfume2));
+        prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "45.000đ", R.drawable.makeup1));
+        prodList.add(new HomeProductModel("On The Body Perfume Classic Pink", "500g", "130.000đ", R.drawable.body1));
+        prodList.add(new HomeProductModel("Dove Damage Repair Shampoo", "640g", "160.000đ", R.drawable.hair1));
+        prodList.add(new HomeProductModel("Biodermal Makeup Remover", "500ml", "300.000đ", R.drawable.skincare1));
+        prodList.add(new HomeProductModel("VERSACE Eros EDT Perfume", "100ml", "2.500.000đ", R.drawable.perfume1));
+        prodList.add(new HomeProductModel("MOSCHINO Toy 2 Perfume", "100ml", "2.400.000đ", R.drawable.perfume2));
 
         prodAdapter = new HomeProductAdapter(getActivity(), prodList);
         prodRec.setAdapter(prodAdapter);

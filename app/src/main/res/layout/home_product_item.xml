@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/prod_image"
-        android:layout_width="200dp"
-        android:layout_height="350dp"
+        android:layout_width="220dp"
+        android:layout_height="400dp"
         android:layout_marginEnd="24dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
@@ -49,7 +49,8 @@
         android:text="Price"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/prod_qty"
@@ -70,9 +71,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/rubik_bold"
-        android:text=" 65.000 đ"
-        android:textSize="17sp"
+        android:text=" 20.065.000 đ"
         android:textColor="#42995C"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@id/prod_qty"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.0"
@@ -85,15 +86,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="212dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="180dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="Vaseline Original Healing Jelly"
+        android:text="@string/on_the_body_perfume_classic_pink"
         android:textColor="#2A0B26"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView6"/>
+        app:layout_constraintTop_toBottomOf="@id/imageView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

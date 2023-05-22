@@ -1,6 +1,10 @@
 package com.example.cosmeticsstore.adapters;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cosmeticsstore.ProductDetailsActivity;
 import com.example.cosmeticsstore.R;
 import com.example.cosmeticsstore.models.HomeProductModel;
 
@@ -36,6 +41,17 @@ public class HomeProductAdapter extends RecyclerView.Adapter<HomeProductAdapter.
         holder.prodName.setText(list.get(position).getProductName());
         holder.prodQty.setText(list.get(position).getProductQty());
         holder.prodPrice.setText(list.get(position).getPrice());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, ProductDetailsActivity.class);
+                Pair[] pairs = new Pair[1];
+                pairs[0] = new Pair<View, String>(holder.prodImage, "image");
+                ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation((Activity) context, pairs);
+                context.startActivity(i, activityOptions.toBundle());
+            }
+        });
     }
 
     @Override
