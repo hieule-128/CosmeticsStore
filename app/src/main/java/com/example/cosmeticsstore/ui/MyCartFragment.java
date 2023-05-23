@@ -36,7 +36,7 @@ public class MyCartFragment extends Fragment {
         recyclerView = view.findViewById(R.id.cart_rec);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         list = new ArrayList<>();
-        list.add(new CartModel(R.drawable.beauty,"Order 1","30.000đ","4.3"));
+        list.add(new CartModel(R.drawable.hair1,"Order 1","30.000đ","4.3"));
         list.add(new CartModel(R.drawable.beauty,"Order 2","40.000đ","4.4"));
         list.add(new CartModel(R.drawable.beauty,"Order 3","50.000đ","4.5"));
         list.add(new CartModel(R.drawable.beauty,"Order 4","60.000đ","4.6"));
