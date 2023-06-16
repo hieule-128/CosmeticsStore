@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "610767692865",
+    "project_id": "cosmesticapp",
+    "storage_bucket": "cosmesticapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610767692865:android:9d85e781a5dabd6edd52c0",
+        "android_client_info": {
+          "package_name": "com.example.cosmeticsstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610767692865-60qkpgtvvr82odflr54j6v5ip986lq72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnpmXQrINKGrhGlyqvlj_J760xoBHdBGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610767692865-60qkpgtvvr82odflr54j6v5ip986lq72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
