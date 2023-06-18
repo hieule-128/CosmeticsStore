@@ -3,6 +3,7 @@ package com.example.cosmeticsstore.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -79,6 +80,11 @@ public class LoginActivity extends AppCompatActivity {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
         Query check = reference.orderByChild("username").equalTo(userUsername);
+
+        ProgressDialog mDialog = new ProgressDialog(LoginActivity.this);
+        mDialog.setMessage("Please waiting...");
+        mDialog.show();
+
         check.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
