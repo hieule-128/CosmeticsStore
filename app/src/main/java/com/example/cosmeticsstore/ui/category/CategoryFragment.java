@@ -1,4 +1,4 @@
-package com.example.cosmeticsstore.ui.home.category;
+package com.example.cosmeticsstore.ui.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -7,19 +7,23 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.cosmeticsstore.R;
 import com.example.cosmeticsstore.models.HomeHorModel;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHolder> {
     private Context context;
-    private List<HomeHorModel> list;
+    private ArrayList<HomeHorModel> list;
 
-    public HomeHorAdapter(Context context, List<HomeHorModel> list) {
+    public HomeHorAdapter(Context context, ArrayList<HomeHorModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -34,7 +38,7 @@ public class HomeHorAdapter extends RecyclerView.Adapter<HomeHorAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(list.get(position).getImage());
+        Glide.with(context).load(list.get(position).getImage()).into(holder.imageView);
         holder.textView.setText(list.get(position).getName());
     }
 

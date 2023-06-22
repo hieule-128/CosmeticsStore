@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="500dp"
-    tools:context=".ui.home.category.CategoryFragment">
+    tools:context=".ui.category.CategoryFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category_rec"

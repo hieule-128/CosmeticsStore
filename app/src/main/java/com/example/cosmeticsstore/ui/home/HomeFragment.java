@@ -16,19 +16,25 @@ import com.example.cosmeticsstore.adapters.HomeProductAdapter;
 import com.example.cosmeticsstore.databinding.FragmentHomeBinding;
 import com.example.cosmeticsstore.models.HomeHorModel;
 import com.example.cosmeticsstore.models.HomeProductModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.ktx.Firebase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private RecyclerView categoryRec, prodRec;
-    private List<HomeHorModel> list;
+    private ArrayList<HomeHorModel> list;
     private HomeHorAdapter categoryAdapter;
-    private List<HomeProductModel> prodList;
+    private ArrayList<HomeProductModel> prodList;
     private HomeProductAdapter prodAdapter;
-
+    FirebaseDatabase database;
+    DatabaseReference reference = database.getInstance().getReference("category");
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
@@ -36,20 +42,29 @@ public class HomeFragment extends Fragment {
 
         categoryRec = root.findViewById(R.id.home_hor_recycler);
         prodRec = root.findViewById(R.id.home_product_recycler);
-        //For category
-        list = new ArrayList<>();
-        list.add(new HomeHorModel(R.drawable.beauty, "Skincare"));
-        list.add(new HomeHorModel(R.drawable.makeup, "Makeup"));
-        list.add(new HomeHorModel(R.drawable.perfume, "Perfume"));
-        list.add(new HomeHorModel(R.drawable.body, "Body"));
-        list.add(new HomeHorModel(R.drawable.hair, "Hair"));
 
+        categoryRec.setHasFixedSize(true);
+        categoryRec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL,false ));
+        categoryRec.setNestedScrollingEnabled(false);
+        list = new ArrayList<>();
         categoryAdapter = new HomeHorAdapter(getActivity(), list);
         categoryRec.setAdapter(categoryAdapter);
-        categoryRec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL,false ));
-        categoryRec.setHasFixedSize(true);
-        categoryRec.setNestedScrollingEnabled(false);
 
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    HomeHorModel category = dataSnapshot.getValue(HomeHorModel.class);
+                    list.add(category);
+                }
+                categoryAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         //For product item
         prodList = new ArrayList<>();
         prodList.add(new HomeProductModel("Vaseline Original Healing Jelly", "49g", "45.000đ", R.drawable.makeup1));

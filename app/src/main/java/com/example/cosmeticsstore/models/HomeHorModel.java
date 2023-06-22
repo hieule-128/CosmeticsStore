@@ -1,25 +1,27 @@
 package com.example.cosmeticsstore.models;
 
 public class HomeHorModel {
-    int image;
-    String text;
+    String image, name;
 
-    public HomeHorModel(int image, String name) {
-        this.image = image;
-        this.text = name;
+    public HomeHorModel(){
+
     }
-    public int getImage() {
+    public HomeHorModel(String image, String name) {
+        this.image = image;
+        this.name = name;
+    }
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
     public String getName() {
-        return text;
+        return name;
     }
     public void setName(String name) {
-        this.text = name;
+        this.name = name;
     }
 }
